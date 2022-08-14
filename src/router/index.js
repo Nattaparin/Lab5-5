@@ -9,7 +9,6 @@ import NotFoundView from '@/views/NotFoundView.vue'
 import NetWorkError from '@/views/NetworkErrorView.vue'
 import EventAirlineDetail from '@/views/event/EventAirlineDetail.vue'
 import NProgress from 'nprogress'
-
 const routes = [
   {
     path: '/',
@@ -89,12 +88,11 @@ const router = createRouter({
   routes
 })
 
+//Already here!
 router.beforeEach(() => {
   NProgress.start()
 })
-
 router.afterEach(() => {
   NProgress.done()
 })
-
 export default router
