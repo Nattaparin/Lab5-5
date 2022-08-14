@@ -8,7 +8,6 @@ import Eventlayout from '@/views/event/EventLayoutView.vue'
 import NotFoundView from '@/views/NotFoundView.vue'
 import NetWorkError from '@/views/NetworkErrorView.vue'
 import EventAirlineDetail from '@/views/event/EventAirlineDetail.vue'
-
 const routes = [
   {
     path: '/',
@@ -51,6 +50,18 @@ const routes = [
         name: 'EventEdit',
         props: true,
         component: EventEdit
+      },
+      {
+        path: '/event/:id/register',
+        name: 'EventRegister',
+        props: true,
+        component: EventRegister
+      },
+      {
+        path: '/event/:id/edit',
+        name: 'EventEdit',
+        props: true,
+        component: EventEdit
       }
     ]
   },
@@ -69,18 +80,6 @@ const routes = [
     path: '/network-error',
     name: 'NetworkError',
     component: NetWorkError
-  },
-  {
-    path: '/event/:id/register',
-    name: 'EventRegister',
-    props: true,
-    component: EventRegister
-  },
-  {
-    path: '/event/:id/edit',
-    name: 'EventEdit',
-    props: true,
-    component: EventEdit
   }
 ]
 
@@ -88,5 +87,4 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
-
 export default router
